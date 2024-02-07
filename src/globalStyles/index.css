@@ -1,0 +1,23 @@
+:root {
+  --font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /* hover시 번짐 효과 넣기 좋음 */
+  --drop-shadow: drop-shadow(0 0 2em #646cffaa);
+  --container-background-color: #F5F8FB;
+
+  --login-join-form-width: 350px;
+
+  --border: 1px solid #e5eaf2;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, .04);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  background-color: var(--container-background-color);
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}

@@ -1,0 +1,8 @@
+.container {
+  margin: 0 auto;
+  width: var(--login-join-form-width);
+  background-color: #fff;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
