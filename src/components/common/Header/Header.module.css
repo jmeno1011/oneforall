@@ -8,6 +8,77 @@
   border-bottom: 1px solid silver;
 }
 
+.headerButton{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileButton{
+  padding: 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.profileButton > svg{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.smallProfile{
+  position: absolute;
+  top: 48px;
+  right: 16px;
+  width: 150px;
+  background-color: #fff;
+  border: var(--border);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.smallProfile>h5{
+  padding: 8px;
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+
+.smallProfile>h5>span{
+  padding-left: 4px;
+  padding-top: 0;
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #6c737f;
+}
+
+.smallProfileBottom{
+  padding: 4px 8px;
+  width: 100%;
+  border-top: 1px solid silver;
+  text-align: center;
+}
+
+.smallProfileBottom> button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.smallProfileBottom> button span{
+  color: #6c737f;
+}
+
 .signoutButton{
   background-color: transparent;
   border: none;
