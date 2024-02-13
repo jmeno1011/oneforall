@@ -12,7 +12,7 @@
   --border-radius: 8px;
 
   /* --pr-color: #646cff; */
-  --pr-color: #1976d2;
+  --pr-color: #008ffb;
 }
 
 body {
@@ -22,7 +22,6 @@ body {
 }
 
 #root {
-  min-height: 100vh;
   position: relative;
 }
 
