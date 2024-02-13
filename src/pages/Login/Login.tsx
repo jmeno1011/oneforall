@@ -30,7 +30,7 @@ export default function Login() {
     } else if (user.pw !== "test") {
       alert("비밀번호가 틀렸습니다.");
     } else {
-      alert(`id: ${user.id}\npw: ${user.pw}\n로그인 되었습니다.`);
+      // alert(`id: ${user.id}\npw: ${user.pw}\n로그인 되었습니다.`);
       dispatch(login(user.id));
       navigate("/");
     }
