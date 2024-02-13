@@ -14,18 +14,6 @@
   gap: 10px;
 }
 
-.form > input{
-  padding: 4px 8px;
-  font-size: 16px;
-  font-family: var(--font-family);
-  border-radius: 5px;
-  border: 1px solid silver;
-}
-
-.form > input:focus{
-  outline: 1px solid var(--pr-color);
-}
-
 .form > button{
   padding: 4px 8px;
   border-radius: 5px;
@@ -35,7 +23,7 @@
 }
 
 .form > button:hover{
-  background-color: #646cffaa;
+  background-color: var(--pr-color);
   color: #fff;
   font-weight: 600;
 }
@@ -44,6 +32,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.formBottom button span{
+  font-size: 14px;
 }
 
 .formBottom button{

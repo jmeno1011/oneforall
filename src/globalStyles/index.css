@@ -11,7 +11,8 @@
   --box-shadow: 0 4px 6px rgba(0, 0, 0, .04);
   --border-radius: 8px;
 
-  --pr-color: #646cff;
+  /* --pr-color: #646cff; */
+  --pr-color: #1976d2;
 }
 
 body {
@@ -23,4 +24,16 @@ body {
 #root {
   min-height: 100vh;
   position: relative;
+}
+
+input{
+  padding: 4px 8px;
+  font-size: 16px;
+  font-family: var(--font-family);
+  border-radius: 5px;
+  border: 1px solid silver;
+}
+
+input:focus{
+  outline: 1px solid var(--pr-color);
 }
