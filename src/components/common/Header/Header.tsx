@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../redux/features/auth";
@@ -8,12 +8,18 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { userID } = useSelector((state: RootState) => state.auth);
   const [openProfile, setOpenProfile] = useState<boolean>(false);
   const profileRef = useRef<HTMLDivElement>(null);
 
   const onClickOpenProfile = () => {
     setOpenProfile(!openProfile);
+  };
+
+  const onClickProfileLink = () => {
+    setOpenProfile(false);
+    navigate("/profile");
   };
 
   const onClickSignout = () => {
@@ -57,10 +63,8 @@ export default function Header() {
               아이디: <span>{userID}</span>
             </h5>
             <div className={styles.smallProfileBottom}>
-              <button>
-                <Link to={"/profile"}>
-                  <span>프로필</span>
-                </Link>
+              <button onClick={onClickProfileLink}>
+                <span>프로필</span>
               </button>
             </div>
           </div>
