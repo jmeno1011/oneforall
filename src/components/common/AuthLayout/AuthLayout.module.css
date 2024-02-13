@@ -1,5 +1,6 @@
 .container {
   margin: 0 auto;
+  margin-top: 60px;
   width: var(--login-join-form-width);
   background-color: #fff;
   border: var(--border);
