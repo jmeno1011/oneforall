@@ -1,3 +1,35 @@
 .container{
   width: var(--nav-width);
+  border-right: 1px solid silver;
+}
+
+.navWrapper{
+  padding: 0 16px;
+}
+
+.navTitle{
+  padding: 16px 8px 8px 12px;
+  margin-bottom: 4px;
+  color: #808b96;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--pretendard);
+}
+
+.navTitle:hover{
+  color: #000;
+}
+
+.childrenTitle{
+  padding: 4px 8px 4px 12px;
+  margin: 0 0 4px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #637381;
 }
