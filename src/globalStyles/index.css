@@ -13,6 +13,8 @@
 
   /* --pr-color: #646cff; */
   --pr-color: #008ffb;
+
+  --nav-width: 300px;
 }
 
 body {
