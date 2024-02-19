@@ -29,6 +29,8 @@
 }
 
 .formBottom{
+  padding: 16px;
+  padding-top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

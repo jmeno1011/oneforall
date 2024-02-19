@@ -36,6 +36,9 @@ export default function Login() {
     }
   };
 
+  const onClickForgotPWButton = () => {
+  };
+
   return (
     <AuthLayout>
       <header className={styles.header}>
@@ -59,17 +62,17 @@ export default function Login() {
           value={user.pw}
         />
         <button>로그인</button>
-        <div className={styles.formBottom}>
-          <button>
-            <span>비밀번호 찾기</span>
-          </button>
-          <button>
-            <Link to={"/join"}>
-              <span>회원가입</span>
-            </Link>
-          </button>
-        </div>
       </form>
+      <div className={styles.formBottom}>
+        <button onClick={onClickForgotPWButton}>
+          <span>비밀번호 찾기</span>
+        </button>
+        <button>
+          <Link to={"/join"}>
+            <span>회원가입</span>
+          </Link>
+        </button>
+      </div>
     </AuthLayout>
   );
 }
