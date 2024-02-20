@@ -31,6 +31,7 @@
   margin: 0 0 4px;
   min-height: 44px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-size: 14px;
   font-weight: 600;
@@ -43,6 +44,27 @@
   background-color: rgb(243, 246, 249);
 }
 
+.childrenTitle > div{
+  display: flex;
+  align-items: center;
+}
+
+.childrenTitle > div > svg{
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.childrenTitle > .subTitleIcon > svg{
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+}
+
+.subTitleIconOpen{
+  transform: rotate(180deg);
+}
+
 .childrenSelected{
   background-color: #ebf5ff;
   color: var(--pr-color);
@@ -52,8 +74,43 @@
   background-color: rgba(0, 127, 255, 0.12);
 }
 
-.childrenTitle > svg{
+.child{
+  padding: 4px 8px 4px 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.child span:first-child{
   width: 24px;
   height: 24px;
   margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child span:first-child::before{
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #919eab;
+}
+
+.child span:last-child{
+ font-size: 14px; 
+ color: #919eab;
+ font-weight: 500;
+}
+
+.childSelected span:first-child::before{
+  background-color: var(--pr-color);
+  width: 8px;
+  height: 8px;
+}
+
+.childSelected span:last-child{
+  color: #000;
+  font-weight: 600;
 }
