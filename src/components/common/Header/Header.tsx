@@ -19,7 +19,7 @@ export default function Header() {
 
   const onClickProfileLink = () => {
     setOpenProfile(false);
-    navigate("/profile");
+    navigate("/user");
   };
 
   const onClickSignout = () => {
