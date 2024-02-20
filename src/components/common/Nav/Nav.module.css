@@ -7,6 +7,10 @@
   padding: 0 16px;
 }
 
+.navWrapper>ul{
+  transition: all 1s;
+}
+
 .navTitle{
   padding: 16px 8px 8px 12px;
   margin-bottom: 4px;
@@ -32,4 +36,24 @@
   font-weight: 600;
   text-transform: capitalize;
   color: #637381;
+  border-radius: 8px;
+}
+
+.childrenTitle:hover{
+  background-color: rgb(243, 246, 249);
+}
+
+.childrenSelected{
+  background-color: #ebf5ff;
+  color: var(--pr-color);
+}
+
+.childrenSelected:hover{
+  background-color: rgba(0, 127, 255, 0.12);
+}
+
+.childrenTitle > svg{
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
 }
