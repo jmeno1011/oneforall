@@ -6,6 +6,8 @@ import Layout from "./components/common/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Join from "./pages/Join/Join";
 import Profile from "./pages/Profile/Profile";
+import User from "./pages/User/User";
+import UserList from "./pages/User/UserList/UserList";
 
 function App() {
   const { loggedIn } = useSelector((state: RootState) => state.auth);
@@ -18,7 +20,10 @@ function App() {
           element={!loggedIn ? <Navigate to={"/login"} replace /> : <Layout />}
         >
           <Route index element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/user" element={<User />}>
+            <Route index element={<Profile />} />
+            <Route path="list" element={<UserList />} />
+          </Route>
         </Route>
         <Route
           path="/login"
