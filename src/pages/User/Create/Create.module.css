@@ -1,0 +1,38 @@
+.container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 8px;
+}
+
+.header>h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--pretendard);
+}
+
+.main{
+  display: flex;
+  gap: 24px;
+}
+
+.profilePhoto{
+  padding: 24px;
+  width: 30%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.infoInput{
+  padding: 24px;
+  width: 60%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
