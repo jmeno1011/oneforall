@@ -8,6 +8,7 @@ import Join from "./pages/Join/Join";
 import Profile from "./pages/User/Profile/Profile";
 import User from "./pages/User/User";
 import UserList from "./pages/User/UserList/UserList";
+import Edit from "./pages/User/Edit/Edit";
 
 function App() {
   const { loggedIn } = useSelector((state: RootState) => state.auth);
@@ -23,6 +24,7 @@ function App() {
           <Route path="/user" element={<User />}>
             <Route index element={<Profile />} />
             <Route path="list" element={<UserList />} />
+            <Route path="edit" element={<Edit />} />
           </Route>
         </Route>
         <Route

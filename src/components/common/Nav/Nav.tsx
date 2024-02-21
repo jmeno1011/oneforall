@@ -62,6 +62,10 @@ export default function Nav() {
               title: "List",
               link: "/user/list",
             },
+            {
+              title: "Edit",
+              link: "/user/edit",
+            },
           ],
         },
       ],

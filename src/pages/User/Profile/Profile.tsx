@@ -20,7 +20,7 @@ export default function Profile() {
         <div className={styles.btnArea}>
           <button className={styles.btn}>
             <Link to={"/user/edit"}>
-              <span>Edit</span>
+              <span>edit</span>
             </Link>
           </button>
         </div>
