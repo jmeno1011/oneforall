@@ -5,7 +5,7 @@ import Login from "./pages/Login/Login";
 import Layout from "./components/common/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Join from "./pages/Join/Join";
-import Profile from "./pages/Profile/Profile";
+import Profile from "./pages/User/Profile/Profile";
 import User from "./pages/User/User";
 import UserList from "./pages/User/UserList/UserList";
 
