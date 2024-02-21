@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Home from "../../../assets/Nav/home.svg?react";
 import User from "../../../assets/Nav/user.svg?react";
 import Down from "../../../assets/Nav/down.svg?react";
+import Chart from "../../../assets/Nav/chart.svg?react";
 import styles from "./Nav.module.css";
 import { ReactNode, useState } from "react";
 import classNames from "classnames/bind";
@@ -66,6 +67,32 @@ export default function Nav() {
               title: "Edit",
               link: "/user/edit",
             },
+            {
+              title: "Create",
+              link: "/user/create",
+            },
+          ],
+        },
+        {
+          title: "Chart",
+          link: "/chart",
+          icon: <Chart />,
+          type: "subTitle",
+          openIcon: <Down />,
+          opened: true,
+          child: [
+            {
+              title: "Bar",
+              link: "/chart",
+            },
+            {
+              title: "Line",
+              link: "/chart/line",
+            },
+            {
+              title: "Diagram",
+              link: "/chart/diagram",
+            },
           ],
         },
       ],
@@ -73,7 +100,7 @@ export default function Nav() {
   ]);
 
   const { pathname } = useLocation();
-  
+
   const selectNavTitle = (title: string, type: string) => {
     if (type === "title") {
       setAccordionNav(
@@ -142,12 +169,17 @@ export default function Nav() {
                     </Link>
                     {child.opened
                       ? child.child?.map((ch) => (
-                            <Link to={ch.link} key={ch.title}>
-                              <div className={cn('child', ch.link === pathname && 'childSelected')}>
-                                <span></span>
-                                <span>{ch.title}</span>
-                              </div>
-                            </Link>
+                          <Link to={ch.link} key={ch.title}>
+                            <div
+                              className={cn(
+                                "child",
+                                ch.link === pathname && "childSelected"
+                              )}
+                            >
+                              <span></span>
+                              <span>{ch.title}</span>
+                            </div>
+                          </Link>
                         ))
                       : null}
                   </li>
@@ -161,12 +193,10 @@ export default function Nav() {
   );
 }
 
-function linkCheck(pathname: string, link:string){
-  
-  if(pathname === "/" && link === "/"){
-    return "childrenSelected"
-    
-  }else if(link !== "/" && pathname.includes(link)){
-    return "childrenSelected" 
+function linkCheck(pathname: string, link: string) {
+  if (pathname === "/" && link === "/") {
+    return "childrenSelected";
+  } else if (link !== "/" && pathname.includes(link)) {
+    return "childrenSelected";
   }
 }
