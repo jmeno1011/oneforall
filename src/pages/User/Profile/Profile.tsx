@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./Profile.module.css";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../redux/store";
 
 export default function Profile() {
+  const {userInfo} = useSelector((state:RootState)=> state.user);
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -11,11 +14,11 @@ export default function Profile() {
         <h4 className={styles.title}>About</h4>
         <div className={styles.profileRow}>
           <label>name</label>
-          <div>tono</div>
+          <div>{userInfo?.name}</div>
         </div>
         <div className={styles.profileRow}>
           <label>email</label>
-          <div>whltn8282@gmail.com</div>
+          <div>{userInfo?.email}</div>
         </div>
         <div className={styles.btnArea}>
           <button className={styles.btn}>

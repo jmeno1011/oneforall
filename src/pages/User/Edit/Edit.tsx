@@ -1,11 +1,12 @@
+import { useSelector } from "react-redux";
 import styles from "./Edit.module.css";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { RootState } from "../../../redux/store";
 
 export default function Edit() {
+  const {userInfo} = useSelector((state:RootState)=> state.user);
   const [user, setUser] = useState({
-    name: "tono",
-    email: "whltn8282@gmail.com",
-    password: "test",
+    ...userInfo,
     password2: "",
   });
 
