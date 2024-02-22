@@ -4,6 +4,8 @@ import styles from "./Login.module.css";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/features/auth";
+import { userRowList } from "../../lib/user";
+import { settingUserInfo } from "../../redux/features/user";
 
 interface Iuser {
   id: string;
@@ -25,19 +27,22 @@ export default function Login() {
 
   const onSubmitLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (user.id !== "test") {
+
+    if (userRowList.filter((info) => info.id === user.id).length !== 1) {
       alert("등록된 아이디가 아닙니다.");
-    } else if (user.pw !== "test") {
+    } else if (
+      userRowList.filter((info) => info.id === user.id)[0].password !== user.pw
+    ) {
       alert("비밀번호가 틀렸습니다.");
     } else {
       // alert(`id: ${user.id}\npw: ${user.pw}\n로그인 되었습니다.`);
+      dispatch(settingUserInfo(userRowList.filter((info) => info.id === user.id)[0]))
       dispatch(login(user.id));
       navigate("/");
     }
   };
 
-  const onClickForgotPWButton = () => {
-  };
+  const onClickForgotPWButton = () => {};
 
   return (
     <AuthLayout>
