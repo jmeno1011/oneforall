@@ -10,6 +10,10 @@ import User from "./pages/User/User";
 import UserList from "./pages/User/UserList/UserList";
 import Edit from "./pages/User/Edit/Edit";
 import Create from "./pages/User/Create/Create";
+import Chart from "./pages/Chart/Chart";
+import Bar from "./pages/Chart/Bar/Bar";
+import Line from "./pages/Chart/Line/Line";
+import Diagram from "./pages/Chart/Diagram/Diagram";
 
 function App() {
   const { loggedIn } = useSelector((state: RootState) => state.auth);
@@ -27,6 +31,11 @@ function App() {
             <Route path="list" element={<UserList />} />
             <Route path="edit" element={<Edit />} />
             <Route path="create" element={<Create />} />
+          </Route>
+          <Route path="/chart" element={<Chart />}>
+            <Route index element={<Bar />} />
+            <Route path="line" element={<Line />} />
+            <Route path="diagram" element={<Diagram />} />
           </Route>
         </Route>
         <Route
